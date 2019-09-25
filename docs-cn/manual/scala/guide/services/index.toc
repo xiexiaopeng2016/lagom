@@ -1,0 +1,11 @@
+ServiceDescriptors:服务描述符
+ServiceImplementation:实现服务
+DependencyInjection:依赖注入;next=ServiceInfo
+ScalaComponents:Scala组件
+ServiceInfo:服务元数据
+ServiceClients:消费服务
+TestingServices:测试服务
+MessageSerializers:消息序列化器
+HeaderFilters:头部过滤器
+ServiceErrorHandling:错误处理
+AdditionalRouters:附加路由器

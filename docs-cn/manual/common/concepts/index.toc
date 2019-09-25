@@ -1,0 +1,17 @@
+CoreConcepts:Lagom概念介绍
+LagomDesignPhilosophy:Lagom设计哲学
+PolyglotSystems:使用Lagom的多语言系统
+DevelopmentEnvironmentOverview:开发环境概述
+BuildConcepts:Lagom构建哲学
+ComponentTechnologies:组件技术
+APIOverview:API概述
+MicroserviceSystemDesign:设计您的微服务系统
+MicroserviceDesign:调整单个微服务的大小
+InternalAndExternalCommunication:内部和外部通信
+ServiceDiscovery: 注册和发现服务
+Immutable:使用不可变对象
+ES_CQRS:管理数据持久性
+ESAdvantage:事件源的优势
+ReadVsWrite:将读取与写入分开
+ScalableDeployment:部署可扩展的弹性系统
+
