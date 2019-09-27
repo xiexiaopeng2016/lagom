@@ -1,15 +1,14 @@
 # 实现服务
 
-服务是通过提供服务描述符特质的实现来实现的，实现该描述符指定的每个调用。
+服务是通过提供实现服务描述符特质来实现的，实现该描述符指定的每个调用。
 
 例如，这是`HelloService`描述符的实现:
 
 @[hello-service-impl](code/ServiceImplementation.scala)
 
-如您所见，该`sayHello`方法是使用[`ServiceCall`](api/com/lightbend/lagom/scaladsl/api/ServiceCall$.html)的`apply`工厂方法实现的。这需要一个函数，`Request => Future[Response]`并返回一个[`ServiceCall`](api/com/lightbend/lagom/scaladsl/api/ServiceCall.html), 其`invoke`方法仅委托给该函数的方法。这里要意识到的重要一点是，`sayHello`自身不会执行调用，它只会返回要执行的服务调用。这样做的好处是，在将调用与其他横切关注点, 例如身份验证, 进行组合时，可以使用基于普通功能的组合轻松完成此操作。
+如您所见，该`sayHello`方法是使用[`ServiceCall`](api/com/lightbend/lagom/scaladsl/api/ServiceCall$.html)的`apply`工厂方法实现的。这需要一个函数，`Request => Future[Response]`并返回一个[`ServiceCall`](api/com/lightbend/lagom/scaladsl/api/ServiceCall.html), 其`invoke`方法仅简单地委托给该函数。这里要意识到的重要一点是，`sayHello`自身不会执行调用，它只会返回要执行的服务调用。这样做的好处是，在将调用与其他横切关注点, 例如身份验证, 进行组合时，可以使用基于普通功能的组合轻松完成此操作。
 
-让我们再次看看[`ServiceCall`](api/com/lightbend/lagom/scaladsl/api/ServiceCall.html)接口：
-Let's have a look at our [`ServiceCall`](api/com/lightbend/lagom/scaladsl/api/ServiceCall.html) interface again:
+让我们再看一下[`ServiceCall`](api/com/lightbend/lagom/scaladsl/api/ServiceCall.html)接口：
 
 @[service-call](code/ServiceDescriptors.scala)
 
